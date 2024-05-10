@@ -1,3 +1,9 @@
+[package]
+name = "real_talk"
+version = "0.0.1"
+authors = ["Argani"]
+edition = "2018"
+
 [[bin]]
 name = "rtalk"
 path = "main.rs"
