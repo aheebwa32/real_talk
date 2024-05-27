@@ -26,5 +26,10 @@ jobs:
           production_key="key1"
           development_url="url2"
           development_key="key2"
+          echo $production_url
       - name: Check Env vars
-        run: echo $production_url $production_key $development_url $development_key
+        run: |
+          echo $production_url
+          echo $production_key 
+          echo $development_url 
+          echo $development_key
