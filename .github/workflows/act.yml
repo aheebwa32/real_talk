@@ -15,7 +15,7 @@ jobs:
         id: trn
         run: |
           echo "$GITHUB_REF_NAME"
-          echo false
+        outputs: false
       - name: Exit codes?
         if: steps.trn.outputs == 'false'
         run: "Yeyee"
