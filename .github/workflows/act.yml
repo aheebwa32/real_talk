@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Check Branch
         run: |
-          if [ $GITHUB_REF_NAME != "mainT" ]; then
-            echo "Not main Branch, Exiting..."
+          if [ $GITHUB_REF_NAME != "dani" ]; then
+            echo "Not $GITHUB_REF_NAME Branch, Exiting..."
             exit 1
           else
             echo "Main Branch Confirmed"
