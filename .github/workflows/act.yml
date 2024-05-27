@@ -2,8 +2,8 @@ name: Auto Endpoint
 
 on:
   push:
-    # branches:
-    #   - main
+    branches:
+      - dani
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
         run: |
           if [ $GITHUB_REF_NAME != "mainT" ]; then
             echo "Not main Branch, Exiting..."
-            exit
+            exit 1
           else
             echo "Main Branch Confirmed"
           fi
