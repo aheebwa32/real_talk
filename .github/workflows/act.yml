@@ -22,11 +22,10 @@ jobs:
           fi
       - name: Set Env Vars
         run: |
-          production_url=theprodurl
-          production_key="key1"
-          development_url="url2"
-          development_key="key2"
-          echo $production_url
+          echo "production_url=theprodurl" >> "$GITHUB_ENV"
+          echo "production_key=key1" >> "$GITHUB_ENV"
+          echo "development_url=url2" >> "$GITHUB_ENV"
+          echo "development_key=key2" >> "$GITHUB_ENV"
       - name: Check Env vars
         run: |
           echo $production_url
