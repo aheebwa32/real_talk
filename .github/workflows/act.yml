@@ -22,7 +22,7 @@ jobs:
           fi
       - name: Set Env Vars
         run: |
-          production_url="url1"
+          production_url=theprodurl
           production_key="key1"
           development_url="url2"
           development_key="key2"
