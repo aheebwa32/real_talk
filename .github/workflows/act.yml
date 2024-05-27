@@ -38,5 +38,7 @@ jobs:
           cat main.rs
       - name: Commit Changes
         run: |
+          git config --global user.email "adhueywilan@gmail.com"
+          git config --global user.name "DanielHuey"
           git commit -am "Action Commit"
           git push
