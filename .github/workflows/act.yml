@@ -22,9 +22,9 @@ jobs:
           fi
       - name: Set Env Vars
         run: |
-          production_url = "url1"
-          production_key = "key1"
-          development_url = "url2"
-          development_key = "key2"
+          production_url="url1"
+          production_key="key1"
+          development_url="url2"
+          development_key="key2"
       - name: Check Env vars
         run: echo "$production_url $production_key $development_url $development_key"
