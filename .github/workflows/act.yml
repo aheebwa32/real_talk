@@ -38,7 +38,13 @@ jobs:
           cat main.rs
       - name: Commit Changes
         run: |
-          git config --global user.email "adhueywilan@gmail.com"
-          git config --global user.name "DanielHuey"
-          git commit -am "Action Commit"
-          git push
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m "Automated Action"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
