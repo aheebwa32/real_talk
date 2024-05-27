@@ -1,0 +1,21 @@
+name: Auto Endpoint
+
+on:
+  push:
+    # branches:
+    #   - main
+  workflow_dispatch:
+
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Test Ref Name
+        id: trn
+        run: |
+          echo "$GITHUB_REF_NAME"
+          echo false
+      - name: Exit codes?
+        if: steps.trn.outputs == 'false'
+        run: "Yeyee"
