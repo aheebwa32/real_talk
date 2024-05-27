@@ -36,3 +36,7 @@ jobs:
         run: |
           sed -i "s/Real/Fake/" main.rs
           cat main.rs
+      - name: Commit Changes
+        run: |
+          git commit -am "Action Commit"
+          git push
